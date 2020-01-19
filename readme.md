@@ -5,7 +5,7 @@ ABOUT SYSTEM CONTROL:
 * Only works on windows (any version)
 * fast
 
-**IMPORTANT NOTE : Be sure to save your important work before you do any operation. **
+**IMPORTANT NOTE : Be sure to save your important work before you do any operation.**
 
 That's pretty much everything you need to know :slightly_smiling_face: .
 
