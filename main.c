@@ -4,23 +4,23 @@
 #include <conio.h>
 #include <windows.h>
 
-void sdown(void);
+void shutDown(void);
 void restart(void);
 void menu(void);
-void manual(void);
-void abortsdown(void);
-void logoff(void);
+void remoteShutdown(void);
+void abortShutdown(void);
+void logOff(void);
 void enter(void);
 
-void sdown() //function to shutdown the computer
+void shutDown() //function to shutdown the computer
 {
     printf("\nshuttingg down..\n");
-    system("C:\\WINDOWS\\System32\\shutdown /s");
-    system("cls");
+    system("C:\\WINDOWS\\System32\\shutdown /s"); // executing the shutdown /s file inside the location in c drive.
+    system("cls");                                // clears the previous screen
     menu();
 }
 
-void restart()
+void restart() // reboot the sustem with 30second countdown
 {
     system("cls");
     printf("\nShutting down under 30 seconds ...");
@@ -28,14 +28,14 @@ void restart()
     menu();
 }
 
-void logoff()
+void logOff() // log off current user
 {
     system("cls");
     printf("\n Shutting down under 30 seconds... ");
     system("C:\\WINDOWS\\system32\\shutdown /l");
 }
 
-void manual()
+void remoteShutdown() // remote shutdown settings
 {
 
     system("C:\\WINDOWS\\System32\\shutdown /i");
@@ -43,7 +43,7 @@ void manual()
     menu();
 }
 
-void abortsdown()
+void abortShutdown() // abort the current shutdown process if already live.
 {
     system("cls");
     printf("\n\n");
@@ -51,7 +51,7 @@ void abortsdown()
     menu();
 }
 
-void enter() //to call menu
+void enter()
 {
     int x;
     printf("\n Enter your choice : ");
@@ -59,8 +59,9 @@ void enter() //to call menu
 
     switch (x)
     {
+
     case 1:
-        sdown();
+        shutDown();
         break;
 
     case 2:
@@ -68,21 +69,20 @@ void enter() //to call menu
         break;
 
     case 3:
-        logoff();
+        logOff();
         break;
 
     case 4:
-        manual();
+        remoteShutdown();
         break;
 
     case 5:
-        abortsdown();
+        abortShutdown();
         break;
 
     case 6:
-
         printf("\n Exiting... \n\n");
-        printf("Exiting in 3 seconds...\n");
+        printf("Exiting in about 3 seconds...\n");
         Sleep(3000);
         exit(1);
 
@@ -113,7 +113,7 @@ void menu() //menu, contais all available options
     printf("\n|\t\t\t\t\t\t\t\t|");
     printf("\n\xB2_______________________________________________________________\xB2\n");
 
-    enter();
+    enter(); // function prompt the use to input the choice.
 }
 
 int main()
@@ -122,11 +122,6 @@ int main()
     int choice;
 
     menu();
-    /*
-        printf("\n Enter your choice : ");
-        scanf("%d", &choice);
-        enter(choice);
-   */
 
     getch();
     return 0;
