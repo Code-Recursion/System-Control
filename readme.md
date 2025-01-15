@@ -1,7 +1,7 @@
 ABOUT SYSTEM CONTROL:
 
-* Perform all shutdown related commands in a matter off seconds.
-* Only works on windows (any version)
+* Perform all shutdown related commands in a matter of seconds.
+* Only works on windows OS (any version)
 * fast
 
 <b>NOTE</b> : <i>`Be sure to save your important work before you do any operation.</i>
